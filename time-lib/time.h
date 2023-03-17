@@ -5,7 +5,7 @@
 */
 enum CODE_RESULT
 {
-	INVALID_FORMAT,
+	INVALID_ARGUMENT,
 	OK
 };
 
