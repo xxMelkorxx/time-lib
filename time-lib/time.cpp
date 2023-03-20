@@ -74,10 +74,12 @@ vector<string> split(string str_to_split, char delimeter)
 
 CODE_RESULT GetTimePlus5MinStr(string init_time, string& new_time_str)
 {
-	regex rgx("^[0-2]{0,1}[0-9][:][0-5][0-9]$");
-	if (!regex_match(init_time, rgx))
+	regex rgx1("^[2][0-3][:][0-5][0-9]$");
+	regex rgx2("^[1][0-9][:][0-5][0-9]$");
+	regex rgx3("^[0]{0,1}[0-9][:][0-5][0-9]$");
+	if (!regex_match(init_time, rgx1) && !regex_match(init_time, rgx2) && !regex_match(init_time, rgx3))
 		return INVALID_ARGUMENT;
-
+	
 	vector<string> split_time = split(init_time, ':');
 	int h = stoi(split_time[0]);
 	int m = stoi(split_time[1]);
