@@ -74,7 +74,7 @@ vector<string> split(string str_to_split, char delimeter)
 
 CODE_RESULT GetTimePlus5MinStr(string init_time, string& new_time_str)
 {
-	regex rgx("^[0-2]{0,1}[0-3][:][0-5][0-9]$");
+	regex rgx("^[0-2]{0,1}[0-9][:][0-5][0-9]$");
 	if (!regex_match(init_time, rgx))
 		return INVALID_ARGUMENT;
 
